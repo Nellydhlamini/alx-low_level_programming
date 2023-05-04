@@ -12,7 +12,7 @@ int temp, x;
 for (x = n - 1; x >= n / 2; x--)
 {
 temp = a[n - 1 - x];
-a[x - 1 - x] = a[x];
+a[n - 1 - x] = a[x];
 a[x] = temp;
 }
 
