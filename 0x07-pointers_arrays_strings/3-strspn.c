@@ -20,9 +20,9 @@ if (accept[b] == s[a])
 number++;
 checker = 1;
 }
+}
 if (checker == 0)
 return (number);
 }
 return (number);
-}
 }
