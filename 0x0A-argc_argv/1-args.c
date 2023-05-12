@@ -4,7 +4,7 @@
  * main - prints the number of arguments passed into it.
  * @argc: counts arguments
  * @argv: argument vector
- * return: 0 (successful)
+ * Return: 0 (successful)
  */
 int main(int argc, char *argv[])
 {
