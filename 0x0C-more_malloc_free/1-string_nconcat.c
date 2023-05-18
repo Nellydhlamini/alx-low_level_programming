@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
  * string_nconcat -  concatenates two strings.
- * @s1: first string pointer
- * @s2: second string pointer
+ * @s1:  point to a newly allocated space in memory
+ * @s2: string to be concatenated
  * @n: number of bytes
- * Return: newly allocated space in memory
+ * Return: pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -13,7 +13,6 @@ unsigned int x = 0, y = 0, a = 0, i = 0;
 char *s;
 if (s1 == NULL)
 s1 = "";
-
 if (s2 == NULL)
 s2 = "";
 
@@ -25,12 +24,10 @@ a++;
 
 if (n >= a)
 i = x + a;
-
-else 
+else
 i = x + n;
 
-s = malloc(sizeof(char) * i + 1);
-
+s = malloc(sizeof(char) + i + 1);
 if (s == NULL)
 return (NULL);
 
@@ -50,5 +47,4 @@ y++;
 }
 s[y] = '\0';
 return (s);
-
 }
