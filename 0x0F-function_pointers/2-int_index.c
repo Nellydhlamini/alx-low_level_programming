@@ -4,6 +4,7 @@
  * @array: array to be used
  * @size: size of the array
  * @cmp: pointer to the function to be used to compare values
+ * Return: index of the first element of the array
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
