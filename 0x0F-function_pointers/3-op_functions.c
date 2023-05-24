@@ -27,7 +27,7 @@ return (a - b);
  * op_mul - multiplies two integers
  * @a: first integer
  * @b: second integer
- * Return: returns the product of the integers 
+ * Return: returns the product of the integers
  */
 int op_mul(int a, int b)
 {
