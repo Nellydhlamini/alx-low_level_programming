@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * print_numbers -  prints numbers, followed by a new line.
- * @separator: the string to be printed between numbers.
- * @n:  the number of integers passed to the function.
+ * print_all -  prints everything
+ * @format: lists the types of arguments passed to the function.
  * Return: void
  */
 void print_all(const char * const format, ...)
@@ -32,6 +31,7 @@ case 'f':
 printf("%s%f", separator, va_arg(list, double));
 break;
 case 's':
+str = va_arg(list, char *);
 if (!str)
 str = "(nil)";
 printf("%s%s", separator, str);
