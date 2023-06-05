@@ -1,7 +1,7 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include "lists.h"
 /**
- * size_t print_listint -  prints all the elements of a listint_t list.
+ * print_listint -  prints all the elements of a listint_t list.
  * @h: head of linked list
  * Return: number of nodes
  */
