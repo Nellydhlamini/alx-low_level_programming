@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-int counter = 0;
+int sum = 0;
 
 if (h != NULL)
 {
@@ -15,8 +15,8 @@ while (h)
 {
 printf("%d\n", h->n);
 h = h->next;
-counter++;
+sum++;
 }
 }
-return (counter);
+return (sum);
 }
