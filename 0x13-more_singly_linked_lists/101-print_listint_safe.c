@@ -31,6 +31,7 @@ numnodes++;
 x = x->next;
 y = y->next;
 }
+x = x->next;
 while (x != y)
 {
 numnodes++;
