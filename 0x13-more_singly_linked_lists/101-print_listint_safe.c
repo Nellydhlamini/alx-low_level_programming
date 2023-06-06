@@ -61,7 +61,7 @@ if (numnodes == 0)
 while (head != NULL)
 {
 numnodes++;
-printf("[%p]%d\n", (void *)head, head->n);
+printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
 }
@@ -70,10 +70,10 @@ else
 while (ind < numnodes)
 {
 ind++;
-printf("[%p]%d\n", (void *)head, head->n);
+printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
-printf("-> [%p]%d\n", (void *)head, head->n);
+printf("-> [%p] %d\n", (void *)head, head->n);
 }
 return (numnodes);
 }
