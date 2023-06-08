@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _divide: divides bits
+ * _divide - divides bits
  * @n: number  representing in bits
  * Return: void
  */
@@ -11,7 +11,7 @@ void _divide(unsigned long int n)
 if (n < 1)
 return;
 
-_divide (n >> 1);
+_divide(n >> 1);
 
 if (n & 1)
 _putchar('1');
