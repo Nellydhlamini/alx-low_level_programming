@@ -27,7 +27,7 @@ int find;
 if (!filename)
 return (-1);
 
-find = open(filename, O_RDWR | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR);
+find = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 
 if (find == -1)
 return (-1);
