@@ -21,18 +21,21 @@ return (a);
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int find, wrte;
+int find;
 
 if (!filename)
 return (-1);
 
 find = open(filename, O_WRONLY | O_APPEND);
-wrte = write(find, text_content, _strlen(text_content));
 
-if (find == -1 || wrte == -1)
+if (find == -1)
 return (-1);
+if (text_content)
+{
+if (write(find, text_content, _strlen(text_content)) == -1)
+return (-1);
+}
 
 close(find);
-
 return (1);
 }
