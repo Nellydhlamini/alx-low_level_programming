@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-void close_file(int fd);
+void close_file(int find);
 char *create_buffer(char *file);
 
 /**
@@ -68,8 +68,7 @@ exit(99);
 scan = read(source, buffer, 1024);
 destination = open(argv[2], O_WRONLY | O_APPEND);
 
-}
-while (scan > 0);
+} while (scan > 0);
 
 free(buffer);
 close_file(source);
@@ -80,17 +79,17 @@ return (0);
 
 /**
  * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * @find: The file descriptor to be closed.
  */
-void close_file(int fd)
+void close_file(int find)
 {
 int x;
 
-x = close(fd);
+x = close(find);
 
 if (x == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", find);
 exit(100);
 }
 }
