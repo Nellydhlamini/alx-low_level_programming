@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 char *buff = malloc(sizeof(char *) * letters);
-int find, scan;
+int find, scan, wrte;
 
 if (!buff)
 return (0);
@@ -16,15 +16,15 @@ return (0);
 if (!filename)
 return (0);
 
-find = open(filename, O_RDONLY, 0600);
+find = open(filename, O_RDONLY);
 
-if (find == 1)
+if (find == -1)
 return (0);
 
 scan = read(find, buff, letters);
-write(STDOUT_FILENO, buff, scan);
+wrte = write(STDOUT_FILENO, buff, scan);
 
 free(buff);
 close(find);
-return (scan);
+return (wrte);
 }
